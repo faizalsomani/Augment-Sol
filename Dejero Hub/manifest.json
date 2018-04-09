@@ -1,0 +1,32 @@
+{
+  "name": "Dejero Hub",
+  "version": "2.1",
+  "manifest_version": 2,
+  "description": "Makes work easy for Dejero employees",
+  "icons": {
+    "16": "icon/Dejero16.png",
+    "48": "icon/Dejero48.png",
+    "128": "icon/Dejero128.png"
+  },
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_title": "Dejero Hub"
+  },
+   "content_scripts":[
+    {
+      "matches": [ "https://*/*","http://*/*"],
+      "js": ["content.js","jquery-3.2.1.min.js"]
+    }
+  ],
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "storage"
+  ],
+  "options_page": "options.html"
+}
