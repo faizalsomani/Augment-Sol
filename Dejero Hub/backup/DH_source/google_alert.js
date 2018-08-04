@@ -1,1 +1,0 @@
-alert("only works on google!");
